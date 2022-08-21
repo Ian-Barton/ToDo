@@ -48,14 +48,39 @@ word-break: break-all;
 word-wrap: break-word;
 }
 .bsicon {
-    color:purple;
+    color:#563d7c;
 }
 .jsicon {
-    color: yellow;
+    color: #F0DB4F;
 }
 .htmlicon {
-    color: red;
+    color: #e34c26;
 }
 .cssicon {
-    color: blue;
+    color: #264de4;
+}
+.bg-incom {
+    background-color: #ffa0a0;
+}
+.bg-com {
+    background-color: rgb(128, 255, 170);
+}
+#taskItems {
+    overflow: hidden;
+    position: relative;
+}
+#taskItems .scrollbox {
+    height: 100%;
+    overflow: auto;
+}
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.minHeight {
+    min-height: 70vh;
+}
+.icon-list {
+    font-size: 20px;
 }

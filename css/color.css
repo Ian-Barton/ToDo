@@ -1,0 +1,16 @@
+#color[value = "1"] {background-color: white;}
+#color[value = "2"] {background-color: red;}
+#color[value = "3"] {background-color: magenta;}
+#color[value = "4"] {background-color: lime;}
+#color[value = "5"] {background-color: yellow;}
+#color[value = "6"] {background-color: blue;}
+#color[value = "7"] {background-color: cyan;}
+#color[value = "8"] {background-color: orange;}
+#color[value = "9"] {background-color: springgreen;}
+#color[value = "10"] {background-color: darkviolet;}
+#color[value = "11"] {background-color: tan;}
+#color[value = "12"] {background-color: gold;}
+.color-size { height: 30px;
+    width: 35px; 
+    margin: 3px;
+}
