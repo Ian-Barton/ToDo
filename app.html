@@ -49,19 +49,16 @@
         </div>
     </div>
 </nav>
-<main class="flex-shrink-0">
+<main class="">
     <div class="container h-100 minHeight">
         <div class="row h-100">
-            <div class="col h-100 d-flex flex-column rounded my-2 mx-3 bg-dark">
+            <div class="col h-100 rounded my-2 mx-3 bg-dark">
                 <div class="row h-100">
-                    <div class="col-11">
+                    <div class="col-12">
                         <h5 class="text-danger py-2 border-bottom border-danger">Incomplete Tasks</h5>
                     </div>
-                    <div class="col-1">
-                        <button class="bg-dark text-light btn" id="btnSubmit" type="button">+</button>
-                    </div>
                     <!--  -->
-                    <div class="col" id="taskItems">
+                    <div class="col taskContainer" id="taskItems">
                         <div class="scrollbox">
                             <ul id="list" class="list list-group">
 
@@ -75,13 +72,13 @@
                     <h5 class="py-2 text-light">Add A Task</h5>
                     <div class="form-popup" id="myForm">
                         <form action="/action_page.php" class="form-container">
-                          <input type="text" placeholder="Enter Task" name="task" required>
+                          <input type="text" placeholder="Enter Task" name="task" required id="tasks">
                           <div class="row">
                             <div class="dropdown col-2">
                                 <button class="btn btn-light dropdown-toggle" type="button" id="color-dropdown" data-bs-toggle="dropdown">
                                     Color
                                 </button>
-                                <div class="dropdown-menu bg-secondary" aria-labelledby="color-dropdown">
+                                <div id="col-dropdown" class="dropdown-menu bg-secondary" aria-labelledby="color-dropdown">
                                     <div class="row d-flex justify-content-center">
                                         <div id="color" value="1" type="button" class="col-4 color-size"></div>
                                         <div id="color" value="2" type="button" class="col-4 color-size"></div>
@@ -111,30 +108,36 @@
                                 </button>
                                 <div class="dropdown-menu bg-secondary" aria-labelledby="icon-dropdown">
                                     <div class="row d-flex justify-content-center">
-                                        <div id="icon" value="1" type="button" class="col-4 icon-size"><i class="fa-brands fa-accessible-icon"></i></div>
-                                        <div id="icon" value="2" type="button" class="col-4 icon-size"></div>
-                                        <div id="icon" value="3" type="button" class="col-4 icon-size"></div>
+                                        <div id="icon" value="1" type="button" class="col-4 icon-size"><i class="fab fa-accessible-icon"></i></div>
+                                        <div id="icon" value="2" type="button" class="col-4 icon-size"><i class="fas fa-address-book"></i></div>
+                                        <div id="icon" value="3" type="button" class="col-4 icon-size"><i class="fas fa-address-card"></i></div>
                                     </div>
                                     <div class="row d-flex justify-content-center">
-                                        <div id="icon" value="4" type="button" class="col-4 icon-size"></div>
-                                        <div id="icon" value="5" type="button" class="col-4 icon-size"></div>
-                                        <div id="icon" value="6" type="button" class="col-4 icon-size"></div>
+                                        <div id="icon" value="4" type="button" class="col-4 icon-size"><i class="fas fa-baby"></i></div>
+                                        <div id="icon" value="5" type="button" class="col-4 icon-size"><i class="fas fa-baseball-ball"></i></div>
+                                        <div id="icon" value="6" type="button" class="col-4 icon-size"><i class="fas fa-bell"></i></div>
                                     </div>
                                     <div class="row d-flex justify-content-center">
-                                        <div id="icon" value="7" type="button" class="col-4 icon-size"></div>
-                                        <div id="icon" value="8" type="button" class="col-4 icon-size"></div>
-                                        <div id="icon" value="9" type="button" class="col-4 icon-size"></div>
+                                        <div id="icon" value="7" type="button" class="col-4 icon-size"><i class="fas fa-book"></i></div>
+                                        <div id="icon" value="8" type="button" class="col-4 icon-size"><i class="fas fa-bookmark"></i></div>
+                                        <div id="icon" value="9" type="button" class="col-4 icon-size"><i class="fas fa-briefcase"></i></div>
+                                    </div>    
+                                    <div class="row d-flex justify-content-center">
+                                        <div id="icon" value="10" type="button" class="col-4 icon-size"><i class="fas fa-broom"></i></div>
+                                        <div id="icon" value="11" type="button" class="col-4 icon-size"><i class="fas fa-building"></i></div>
+                                        <div id="icon" value="12" type="button" class="col-4 icon-size"><i class="fas fa-bullhorn"></i></div>
                                     </div>
                                     <div class="row d-flex justify-content-center">
-                                        <div id="icon" value="10" type="button" class="col-4 icon-size"></div>
-                                        <div id="icon" value="11" type="button" class="col-4 icon-size"></div>
-                                        <div id="icon" value="12" type="button" class="col-4 icon-size"></div>
+                                        <div id="icon" value="13" type="button" class="col-4 icon-size"><i class="fas fa-campground"></i></div>
+                                        <div id="icon" value="14" type="button" class="col-4 icon-size"><i class="fas fa-camera"></i></div>
+                                        <div id="icon" value="15" type="button" class="col-4 icon-size"><i class="fas fa-capsules"></i></div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-5">
+                                <button id="btnSubmit" type="button" class="btn btn-light">Add</button>
+                            </div>  
                           </div>
-                          <button type="submit" class="btn">Login</button>
-                          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
                         </form>
                       </div>
                 </div>
@@ -169,6 +172,9 @@
     integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
 </script>
 <script src="js/site.js"></script>
+<script>
+    document.getElementById("btnSubmit").addEventListener("click", getValues);
+</script>
 </body>
 
 </html>

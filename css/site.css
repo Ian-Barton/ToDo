@@ -65,22 +65,24 @@ word-wrap: break-word;
 .bg-com {
     background-color: rgb(128, 255, 170);
 }
-#taskItems {
-    overflow: hidden;
-    position: relative;
-}
-#taskItems .scrollbox {
-    height: 100%;
-    overflow: auto;
-}
-.list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
 .minHeight {
     min-height: 70vh;
 }
 .icon-list {
     font-size: 20px;
 }
+#taskItems {
+    overflow: hidden;
+    position: relative;
+}
+
+#taskItems .scrollbox {
+    height: 100%;
+    overflow: auto;
+}
+.taskContainer {
+    overflow: auto;
+    box-sizing: border-box;
+    height: 500px;
+}
+
